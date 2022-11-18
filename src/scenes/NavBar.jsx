@@ -43,6 +43,16 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
+          <Link 
+            page='Projects'
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+          <Link 
+            page='Contact'
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
         </div>
         ) : (
           <button
@@ -54,6 +64,47 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               size='1.8rem'
             />
           </button>
+        )}
+        
+        {/* MOBILE POP-UP MENU */}
+        {!isAboveSmallScreens && isMenuToggled && (
+          <div className='fixed right-0 bottom-0 h-full w-[300px] bg-blue'>
+            {/* CLOSE ICON */}
+            <div className='flex justify-end p-12'>
+              <button
+                onClick={() => setIsMenuToggled(!isMenuToggled)}
+              >
+                <GrClose 
+                  size='1.8rem'
+                />
+              </button>
+            </div>
+
+            {/* MENU ITEMS */}
+            <div className='flex flex-col gap-10 ml-[33%] text-2xl'>
+              <Link 
+                page='Home'
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link 
+                page='Skills'
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link 
+                page='Projects'
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link 
+                page='Contact'
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+            </div>
+
+          </div>
         )}
       </div>
     </nav>
