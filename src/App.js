@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import NavBar from './scenes/NavBar';
 import useMediaQuery from './hooks/useMediaQuery';
+import DotGroup from './components/DotGroup';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
@@ -23,6 +24,14 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
+      <div>
+        {isAboveMediumScreens && (
+          <DotGroup 
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+        )}
+      </div>
     </div>
   );
 }
