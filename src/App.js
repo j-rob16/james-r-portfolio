@@ -23,10 +23,6 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-        
-      <h1>
-        The portfolio
-      </h1>
     </div>
   );
 }
