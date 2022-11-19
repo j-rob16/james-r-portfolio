@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import SocialMediaIcons from '../components/SocialMediaIcons';
 import useMediaQuery from '../hooks/useMediaQuery';
 
-const Home = () => {
+const Home = ({ setSelectedPage }) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
@@ -56,6 +57,43 @@ const Home = () => {
             </span>
             {" "} /&gt;</p>
         </motion.div>
+
+        {/* CONTACT ME SEGMENT */}
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.2, duration: 1.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 }
+          }}
+          className='flex mt-5 justify-center md:justify-start'
+        >
+          <AnchorLink
+            className='bg-orange text-yellow-300 rounded-l-sm py-3 px-7 font-semibold
+                      hover:bg-yellow-300 hover:text-orange transition duration-500 hover:cursor-pointer'
+            onClick={() => setSelectedPage("contact")}
+            href='#contact'
+          >
+            Contact Me
+          </AnchorLink>
+          <AnchorLink
+            className='rounded-r-sm bg-orange hover:bg-yellow-300 hover:pl-0.5 py-0.5 pr-0.5'
+            onClick={() => setSelectedPage('contact')}
+            href='#contact'
+          >
+            <div 
+              className='bg-yellow-300 hover:bg-orange text-orange hover:text-yellow-300 transition duration-500 
+                         w-full h-full px-10 hover:
+                         flex items-center justify-center font-playfair'
+            >
+              Let's talk.
+            </div>
+          </AnchorLink>
+        </motion.div>
+
+        {/* SOCIAL MEDIA */}
         <motion.div
           initial='hidden'
           whileInView='visible'

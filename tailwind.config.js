@@ -13,6 +13,9 @@ module.exports = {
         indigo: '#27476E',
         white: '#F6F7F8'
       },
+      backgroundImage: {
+        bridge: "url('./assets/snow-bridge.jpg')",
+      },
       // backgroundImage: (theme) => ({
       //   "gradient-rainbow": "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)",
       //   "gradient-rainblue": "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 107.73%)"
@@ -23,7 +26,6 @@ module.exports = {
       },
       content: {
         splatter: "url('./assets/splatter.png')",
-        bridge: "url('./assets/snow-bridge.jpg')",
       },
       screens: {
         xs: "480px",

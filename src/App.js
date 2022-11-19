@@ -33,7 +33,7 @@ function App() {
           />
         )}
         <Home 
-
+          setSelectedPage={setSelectedPage}
         />
       </div>
     </div>
