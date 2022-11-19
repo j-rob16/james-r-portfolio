@@ -25,7 +25,7 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div>
+      <div className='w-5/6 mx-auto md:h-full'>
         {isAboveMediumScreens && (
           <DotGroup 
             selectedPage={selectedPage}
@@ -33,7 +33,7 @@ function App() {
           />
         )}
         <Home 
-          
+
         />
       </div>
     </div>

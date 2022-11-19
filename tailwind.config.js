@@ -23,6 +23,7 @@ module.exports = {
       },
       content: {
         splatter: "url('./assets/splatter.png')",
+        bridge: "url('./assets/snow-bridge.jpg')",
       },
       screens: {
         xs: "480px",
