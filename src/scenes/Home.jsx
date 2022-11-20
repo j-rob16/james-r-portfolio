@@ -17,7 +17,7 @@ const Home = ({ setSelectedPage }) => {
         <div 
           className='relative z-0 ml-20 before:absolute before:-top-5 before:-left-5
                      before:rounded-tl-[250px] before:w-full before:max-w-[600px] before:h-full
-                     before:border-2 before:border-blue before:z-[-1]'        
+                     before:border-2 before:border-[#829CBC] before:z-[-1]'        
         >
           <img 
             alt='profile'

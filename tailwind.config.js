@@ -8,10 +8,10 @@ module.exports = {
         orange: '#EB6534',
         redwood: '#AD5D4E',
         purple: '#40476D',
-        blue: "#006992",
+        frostblue: "#829CBC",
         darkblue: '#001D4A',
         indigo: '#27476E',
-        white: '#F6F7F8'
+        white: '#E8EBF7'
       },
       // backgroundImage: {
       //   bridge: "url('./assets/snow-bridge.jpg')",

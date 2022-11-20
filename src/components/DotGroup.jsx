@@ -9,7 +9,9 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
     <div className='flex flex-col gap-6 fixed top-[60%] right-7'>
       <AnchorLink
         className={`
-          ${selectedPage === 'home' ? selectedStyles : "bg-grey-100"}
+          ${
+            selectedPage === 'home' ? selectedStyles : "bg-[#1D3461]"
+          }
           w-3 h-3 rounded-full
           `}  
           href='#home'
@@ -17,7 +19,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
       />
       <AnchorLink
         className={`
-          ${selectedPage === 'skills' ? selectedStyles : "bg-blue"}
+          ${selectedPage === 'skills' ? selectedStyles : "bg-[#1D3461]"}
           w-3 h-3 rounded-full
           `}  
           href='#skills'
@@ -25,7 +27,9 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
       />
       <AnchorLink
         className={`
-          ${selectedPage === 'projects' ? selectedStyles : "bg-blue"}
+          ${
+            selectedPage === 'projects' ? selectedStyles : "bg-[#1D3461]"
+          }
           w-3 h-3 rounded-full
           `}  
           href='#projects'
@@ -33,7 +37,9 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
       />
       <AnchorLink
         className={`
-          ${selectedPage === 'contact' ? selectedStyles : "bg-blue"}
+          ${
+            selectedPage === 'contact' ? selectedStyles : "bg-[#1D3461]"
+          }
           w-3 h-3 rounded-full
           `}  
           href='#contact'
