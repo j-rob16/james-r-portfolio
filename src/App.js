@@ -40,9 +40,9 @@ function App() {
       </div>
       {/* <LineGradient /> */}
 
-      <div className='bg-[#BBDEF0] h-full'>
+      {/* <div className='bg-[#BBDEF0] h-full'>
         <Skills />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import AboutMe from '../components/AboutMe';
 import SocialMediaIcons from '../components/SocialMediaIcons';
 import useMediaQuery from '../hooks/useMediaQuery';
 
@@ -69,12 +70,29 @@ const Home = ({ setSelectedPage }) => {
           </div>
         </motion.div>
 
-        {/* CONTACT ME SEGMENT */}
+        {/* ABOUT ME */}
         <motion.div
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true, amount: 0.5 }}
           transition={{ delay: 0.2, duration: 1.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 }
+          }}
+          className='flex justify-center mb-10'
+        >
+
+          <AboutMe />
+
+        </motion.div>
+
+        {/* CONTACT ME SEGMENT */}
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.5, duration: 1.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 }
@@ -109,7 +127,7 @@ const Home = ({ setSelectedPage }) => {
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.5, duration: 1.5 }}
+          transition={{ delay: 0.8, duration: 1.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 }
