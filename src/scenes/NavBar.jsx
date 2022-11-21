@@ -28,7 +28,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   return (
     <nav className={`${navBarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className='flex items-center justify-between mx-auto w-5/6'>
-        <h4 className='font-playfair text-4xl font-bold text-yellow-300'>JR</h4>
+        <h4 className='font-playfair text-4xl font-bold text-orange'><span className='text-yellow-300 text-5xl'>J</span>R</h4>
 
         {/* DESKTOP NAV */}
         {isAboveSmallScreens ? (
@@ -38,11 +38,11 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
-          <Link 
+          {/* <Link 
             page='Skills'
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
-          />
+          /> */}
           <Link 
             page='Projects'
             selectedPage={selectedPage}
@@ -68,7 +68,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         
         {/* MOBILE POP-UP MENU */}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className='fixed right-0 bottom-0 h-full w-[300px] bg-blue'>
+          <div className='fixed right-0 bottom-0 h-full w-[300px] bg-frostblue'>
             {/* CLOSE ICON */}
             <div className='flex justify-end p-12'>
               <button
@@ -87,11 +87,11 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link 
+              {/* <Link 
                 page='Skills'
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
-              />
+              /> */}
               <Link 
                 page='Projects'
                 selectedPage={selectedPage}

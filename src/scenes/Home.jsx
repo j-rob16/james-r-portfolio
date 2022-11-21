@@ -16,15 +16,15 @@ const Home = ({ setSelectedPage }) => {
       <div className='md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32'>
         {isAboveMediumScreens ? (
         <div 
-          className='relative z-0 ml-20 before:absolute before:-top-5 before:-left-5
-                     before:rounded-tl-[250px] before:w-full before:max-w-[600px] before:h-full
+          className='relative z-0 ml-20 before:absolute before:-bottom-8 hover:before:-bottom-5 before:-left-8 hover:before:-left-5
+                     before:rounded-3xl before:w-full before:max-w-[600px] before:h-full
                      before:border-2 before:border-[#829CBC] before:z-[-1]'        
         >
           <img 
             alt='profile'
             src='assets/james-profile.jpeg'
-            className='max-w-[400px] md:max-w-[450px] xl:max-w-[600px] rounded-tl-[250px]
-                       hover:filter hover:saturate-150 transition duration-500'
+            className='max-w-[400px] md:max-w-[450px] xl:max-w-[600px] rounded-3xl
+                       hover:filter'
           />
         </div>
         ) : (
