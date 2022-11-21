@@ -41,7 +41,7 @@ const Home = ({ setSelectedPage }) => {
       {/* MAIN SECTION */}
       <div className='z-30 basis-2/5 mt-12 md:mt-32'>
         <motion.div
-          className='flex justify-center items-center'
+          className='flex justify-center items-center basis-3/5 mb-7'
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true, amount: 0.5 }}
@@ -51,17 +51,22 @@ const Home = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 }
           }}        
         >
-          <p
-            className='text-5xl font-playfair z-10 text-center md:text-start mb-10
-                      hover:text-orange transition duration-700'
-          >
-          &lt;James {""} 
-            <span
-              className='text-yellow-300'
+          <div className='flex flex-col'>
+            <p className='font-playfair text-sm text-left'>Hi, I'm</p>
+            <p
+              className='text-5xl font-playfair z-10 text-center md:text-start mb-2
+                        text-yellow-300 transition duration-700'
             >
-            Robbins 
-            </span>
-            {" "} /&gt;</p>
+            James {""} 
+              <span
+                className='text-orange'
+              >
+              Robbins 
+              </span>
+            </p>
+            <p className='font-playfair text-sm text-right'>A Junior Software Developer</p>
+
+          </div>
         </motion.div>
 
         {/* CONTACT ME SEGMENT */}
@@ -74,7 +79,7 @@ const Home = ({ setSelectedPage }) => {
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 }
           }}
-          className='flex mt-5 justify-center'
+          className='flex justify-center'
         >
           <AnchorLink
             className='bg-orange text-yellow-300 rounded-l-sm py-3 px-7 font-semibold
