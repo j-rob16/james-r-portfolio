@@ -4,7 +4,7 @@ import useMediaQuery from './hooks/useMediaQuery';
 import DotGroup from './components/DotGroup';
 import Home from './scenes/Home';
 import LineGradient from './components/LineGradient';
-import Skills from './scenes/Skills';
+import AboutMe from './scenes/AboutMe';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
@@ -40,9 +40,9 @@ function App() {
       </div>
       {/* <LineGradient /> */}
 
-      {/* <div className='bg-[#BBDEF0] h-full'>
-        <Skills />
-      </div> */}
+      <div className='bg-[#BBDEF0] h-full'>
+        <AboutMe />
+      </div>
     </div>
   );
 }

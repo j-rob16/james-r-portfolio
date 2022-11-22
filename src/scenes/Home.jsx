@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import AboutMe from '../components/AboutMe';
 import SocialMediaIcons from '../components/SocialMediaIcons';
 import useMediaQuery from '../hooks/useMediaQuery';
 
@@ -82,8 +81,6 @@ const Home = ({ setSelectedPage }) => {
           }}
           className='flex justify-center mb-10'
         >
-
-          <AboutMe />
 
         </motion.div>
 
