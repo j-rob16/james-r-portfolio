@@ -15,13 +15,13 @@ const container = {
   }
 };
 
-const Project = ({ title, subtitle }) => {
+const Project = ({ title, subtitle, href }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 hover:cursor-pointer
-                         bg-indigo z-30 flex flex-col justify-center items-center text-center p-16 text-frostblue`
+                         bg-frostblue z-30 flex flex-col justify-center items-center text-center p-16 text-indigo`
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
-  <motion.div variants={projectVariant} className='relative'>
+  <motion.div variants={projectVariant} className='relative' href={href}>
     <div className={overlayStyles}>
       <p className='text-2xl font-playfair'>{title}</p>
       <p className='mt-7'>{subtitle}</p>
@@ -68,10 +68,17 @@ const Projects = () => {
           whileInView='visible'
           viewport={{ once: true, amount: 0.5 }}
           variants={container}
-          className='sm:grid sm:grid-cols-3'
+          className='sm:grid sm:grid-cols-3 gap-4'
       >
       {/* ROW 1 */}
-        <Project title='Group-Game-Project' />
+        <Project 
+          title='Game Group Project' 
+          subtitle='Built over 2 weeks as a team of 4.'
+        />
+        <Project 
+          title='Nasa Group Project' 
+          subtitle='Built over 7 days as a team of 4.'
+        />
 
       </motion.div>
       </div>

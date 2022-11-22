@@ -23,12 +23,12 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
-  const navBarBackground = isTopOfPage ? '' : 'bg-orange';
+  const navBarBackground = isTopOfPage ? '' : 'bg-charcoal';
 
   return (
     <nav className={`${navBarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className='flex items-center justify-between mx-auto w-5/6'>
-        <h4 className='font-playfair text-4xl font-bold text-orange'><span className='text-yellow-300 text-5xl'>J</span>R</h4>
+        <h4 className='font-playfair text-4xl font-bold text-burnt'><span className='text-crayola text-5xl'>J</span>R</h4>
 
         {/* DESKTOP NAV */}
         {isAboveSmallScreens ? (
@@ -107,6 +107,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </div>
         )}
       </div>
+      <div className={isTopOfPage ? '' : `w-full h-1 absolute bottom-0 bg-green`}></div>
     </nav>
   );
 };

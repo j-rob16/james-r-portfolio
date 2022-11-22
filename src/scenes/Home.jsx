@@ -97,20 +97,20 @@ const Home = ({ setSelectedPage }) => {
           className='flex justify-center'
         >
           <AnchorLink
-            className='bg-orange text-yellow-300 rounded-l-sm py-3 px-7 font-semibold
-                      hover:bg-yellow-300 hover:text-orange transition duration-500 hover:cursor-pointer'
+            className='bg-burnt text-crayola rounded-l-sm py-3 px-7 font-semibold
+                      hover:bg-crayola hover:text-burnt transition duration-500 hover:cursor-pointer'
             onClick={() => setSelectedPage("contact")}
             href='#contact'
           >
             Contact Me
           </AnchorLink>
           <AnchorLink
-            className='rounded-r-sm bg-orange hover:bg-yellow-300 hover:pl-0.5 py-0.5 pr-0.5'
+            className='rounded-r-sm bg-burnt hover:bg-crayola hover:pl-0.5 py-0.5 pr-0.5'
             onClick={() => setSelectedPage('contact')}
             href='#contact'
           >
             <div 
-              className='bg-yellow-300 hover:bg-orange text-orange hover:text-yellow-300 transition duration-500 
+              className='bg-crayola hover:bg-burnt text-burnt hover:text-crayola transition duration-500 
                          w-full h-full px-10 hover:
                          flex items-center justify-center font-playfair'
             >
