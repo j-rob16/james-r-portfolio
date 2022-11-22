@@ -6,6 +6,7 @@ import Home from './scenes/Home';
 import LineGradient from './components/LineGradient';
 import AboutMe from './scenes/AboutMe';
 import Projects from './scenes/Projects';
+import Contact from './scenes/Contact';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
@@ -41,12 +42,16 @@ function App() {
       </div>
       {/* <LineGradient /> */}
 
-      <div className='bg-[#BBDEF0] h-[80%]'>
+      <div className='bg-frostblue h-[80%]'>
         <AboutMe />
       </div>
 
       <div className='w-5/6 mx-auto'>
         <Projects />
+      </div>
+
+      <div className='w-5/6 mx-auto md:h-full'>
+        <Contact />
       </div>
     </div>
   );

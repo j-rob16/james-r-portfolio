@@ -17,7 +17,7 @@ const container = {
 
 const Project = ({ title, subtitle, href }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 hover:cursor-pointer
-                         bg-frostblue z-30 flex flex-col justify-center items-center text-center p-16 text-indigo`
+                         bg-frostblue z-30 flex flex-col justify-center items-center text-center mb-5 p-16 text-indigo`
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
@@ -37,6 +37,8 @@ const Projects = () => {
       id='projects'
       className='pt-40 pb-48'
     > 
+
+      {/* TITLE */}
       <motion.div
           initial='hidden'
           whileInView='visible'
@@ -56,7 +58,7 @@ const Projects = () => {
             <LineGradient width='w-1/3' />
           </div>
         </div>
-        <p className='mt-10 mb-10'>
+        <p className='mt-10 mb-10 font-playfair'>
           Some of the Projects I have worked on:
         </p>
       </motion.div>

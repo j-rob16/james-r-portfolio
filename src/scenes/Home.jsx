@@ -55,7 +55,7 @@ const Home = ({ setSelectedPage }) => {
             <p className='font-playfair text-sm text-left'>Hi, I'm</p>
             <p
               className='text-5xl font-playfair z-10 text-center md:text-start mb-2
-                        text-yellow-300 transition duration-700'
+                        text-crayola transition duration-700'
             >
             James {""} 
               <span
