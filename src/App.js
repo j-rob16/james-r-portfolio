@@ -5,6 +5,7 @@ import DotGroup from './components/DotGroup';
 import Home from './scenes/Home';
 import LineGradient from './components/LineGradient';
 import AboutMe from './scenes/AboutMe';
+import Projects from './scenes/Projects';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
@@ -40,8 +41,12 @@ function App() {
       </div>
       {/* <LineGradient /> */}
 
-      <div className='bg-[#BBDEF0] h-full'>
+      <div className='bg-[#BBDEF0] h-[80%]'>
         <AboutMe />
+      </div>
+
+      <div className='w-5/6 mx-auto'>
+        <Projects />
       </div>
     </div>
   );

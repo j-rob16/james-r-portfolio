@@ -11,7 +11,12 @@ module.exports = {
         frostblue: "#829CBC",
         darkblue: '#001D4A',
         indigo: '#27476E',
-        white: '#E8EBF7'
+        white: '#E8EBF7',
+        burnt: '#E76F51',
+        sandy: '#F4A261',
+        crayola: '#E9C46A',
+        green: '#2A9D8F',
+        charcoal: '#264653',
       },
       // backgroundImage: {
       //   bridge: "url('./assets/snow-bridge.jpg')",
