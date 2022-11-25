@@ -9,8 +9,8 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
   return (
     <AnchorLink
       className={`
-        ${selectedPage === lowerCasePage ? "text-white" : ""}
-        hover:text-crayola transition duration-500
+        ${selectedPage === lowerCasePage ? "text-burnt" : ""}
+        hover:text-burnt transition duration-500
         `}  
         href={`#${lowerCasePage}`}
         onClick={() => setSelectedPage(lowerCasePage)}
@@ -23,7 +23,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
-  const navBarBackground = isTopOfPage ? '' : 'bg-charcoal';
+  const navBarBackground = isTopOfPage ? '' : 'bg-[#ffffff] shadow-black shadow-md opacity-90';
 
   return (
     <nav className={`${navBarBackground} z-40 w-full fixed top-0 py-6`}>
@@ -107,7 +107,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </div>
         )}
       </div>
-      <div className={isTopOfPage ? '' : `w-full h-1 absolute bottom-0 bg-green`}></div>
+      <div className={isTopOfPage ? '' : `w-full h-0 absolute bottom-0 `}></div>
     </nav>
   );
 };
