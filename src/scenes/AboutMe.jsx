@@ -8,20 +8,20 @@ const AboutMe = () => {
   return (
     <section
       id='about'
-      className='w-5/6 mx-auto mt-40'
+      className='mt-40 '
     >
       {isAboveSmallScreens ? (
       <div>
         <motion.div
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 1.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 }
           }}
-          className='bg-indigo mt-3 p-6 rounded-t-2xl relative top-[-80px]'
+          className='mt-'
         >
           <motion.div
             initial='hidden'

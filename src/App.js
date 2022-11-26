@@ -9,6 +9,7 @@ import Projects from './scenes/Projects';
 import Contact from './scenes/Contact';
 
 function App() {
+  const [mode, setMode] = useState('light');
   const [selectedPage, setSelectedPage] = useState('home');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -28,6 +29,8 @@ function App() {
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
+        mode={mode}
+        setMode={setMode}
       />
       <div className='w-5/6 mx-auto'>
         {isAboveMediumScreens && (
@@ -42,7 +45,7 @@ function App() {
       </div>
       {/* <LineGradient /> */}
 
-      <div className='bg-frostblue h-[80%]'>
+      <div className='w-5/6 mx-auto'>
         <AboutMe />
       </div>
 

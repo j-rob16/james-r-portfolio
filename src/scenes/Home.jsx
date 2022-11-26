@@ -9,7 +9,7 @@ const Home = ({ setSelectedPage }) => {
   return (
     <section
       id='home'
-      className='md:flex md:justify-between md:items-center md:h-full gap-16 py-10'
+      className='md:flex md:justify-between md:items-center md:h-full gap-16 py-10 mb-48'
     >
       {/* IMAGE SECTION */}
       <div className='md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32'>
@@ -55,7 +55,7 @@ const Home = ({ setSelectedPage }) => {
             <p className='font-playfair text-sm text-left'>Hi, I'm</p>
             <p
               className='text-5xl font-playfair z-10 text-center md:text-start mb-2
-                        text-crayola transition duration-700'
+                        text-redHighlight transition duration-700'
             >
             James {""} 
               <span

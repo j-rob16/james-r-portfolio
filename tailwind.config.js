@@ -5,18 +5,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        orange: '#EB6534',
-        redwood: '#AD5D4E',
-        purple: '#40476D',
-        frostblue: "#829CBC",
-        darkblue: '#001D4A',
-        indigo: '#27476E',
         white: '#E8EBF7',
         burnt: '#E76F51',
         sandy: '#F4A261',
         crayola: '#E9C46A',
         green: '#2A9D8F',
         charcoal: '#264653',
+        redHighlight: '#B73225',
+        blue: '#004e7c'
       },
       // backgroundImage: {
       //   bridge: "url('./assets/snow-bridge.jpg')",
