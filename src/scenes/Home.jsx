@@ -94,7 +94,7 @@ const Home = ({ setSelectedPage }) => {
         >
           <AnchorLink
             className='bg-redHighlight text-[#f7f7f7] rounded-xl py-3 px-7 font-semibold
-                      hover:bg-crayola hover:text-burnt transition duration-500 hover:cursor-pointer'
+                      hover:bg-[#f7f7f7] hover:text-redHighlight transition duration-500 hover:cursor-pointer'
             onClick={() => setSelectedPage("contact")}
             href='#contact'
           >
