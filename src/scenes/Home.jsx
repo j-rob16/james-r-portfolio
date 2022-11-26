@@ -9,10 +9,11 @@ const Home = ({ setSelectedPage }) => {
   return (
     <section
       id='home'
-      className='md:flex md:justify-between md:items-center md:h-full gap-16 py-10 mb-48'
+      className='md:flex md:justify-between md:items-center md:h-full py-10 mb-48
+                 bg-bridge bg-cover bg-no-repeat w-[100%] h-[100%]'
     >
       {/* IMAGE SECTION */}
-      <div className='md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32'>
+      {/* <div className='md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32'>
         {isAboveMediumScreens ? (
         <div 
           className='relative z-0 ml-20 before:absolute before:-bottom-8 hover:before:-bottom-5 before:-left-8 hover:before:-left-5
@@ -36,10 +37,10 @@ const Home = ({ setSelectedPage }) => {
             />
           </div>
         )}
-      </div>
+      </div> */}
 
       {/* MAIN SECTION */}
-      <div className='z-30 basis-2/5 mt-12 md:mt-32'>
+      <div className='z-30 basis-2/5 mt-48 md:mt-32'>
         <motion.div
           className='flex justify-center items-center basis-3/5 mb-7'
           initial='hidden'
@@ -52,19 +53,14 @@ const Home = ({ setSelectedPage }) => {
           }}        
         >
           <div className='flex flex-col'>
-            <p className='font-playfair text-sm text-left'>Hi, I'm</p>
+            <p className='font-playfair text-sm text-left text-white'>Hi, I'm</p>
             <p
               className='text-5xl font-playfair z-10 text-center md:text-start mb-2
                         text-redHighlight transition duration-700'
             >
-            James {""} 
-              <span
-                className='text-orange'
-              >
-              Robbins 
-              </span>
+            James {""} Robbins
             </p>
-            <p className='font-playfair text-sm text-right'>A Junior Software Developer</p>
+            <p className='font-playfair text-sm text-right text-white'>A Junior Software Developer</p>
 
           </div>
         </motion.div>
@@ -84,7 +80,7 @@ const Home = ({ setSelectedPage }) => {
 
         </motion.div>
 
-        {/* CONTACT ME SEGMENT */}
+        {/* CONTACT ME SECTION */}
         <motion.div
           initial='hidden'
           whileInView='visible'
@@ -97,14 +93,14 @@ const Home = ({ setSelectedPage }) => {
           className='flex justify-center'
         >
           <AnchorLink
-            className='bg-burnt text-crayola rounded-l-sm py-3 px-7 font-semibold
+            className='bg-redHighlight text-[#f7f7f7] rounded-xl py-3 px-7 font-semibold
                       hover:bg-crayola hover:text-burnt transition duration-500 hover:cursor-pointer'
             onClick={() => setSelectedPage("contact")}
             href='#contact'
           >
             Contact Me
           </AnchorLink>
-          <AnchorLink
+          {/* <AnchorLink
             className='rounded-r-sm bg-burnt hover:bg-crayola hover:pl-0.5 py-0.5 pr-0.5'
             onClick={() => setSelectedPage('contact')}
             href='#contact'
@@ -116,7 +112,7 @@ const Home = ({ setSelectedPage }) => {
             >
               Let's talk.
             </div>
-          </AnchorLink>
+          </AnchorLink> */}
         </motion.div>
 
         {/* SOCIAL MEDIA */}

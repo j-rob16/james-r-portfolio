@@ -23,7 +23,7 @@ const Contact = () => {
     >
       {/* HEADING */}
       <motion.div
-        className='flex justify-end w-full'
+        className='flex justify-center w-full'
         initial='hidden'
         whileInView='visible'
         viewport={{ once: true, amount: 0.5 }}
@@ -37,7 +37,7 @@ const Contact = () => {
           <p className='font-playfair font-semibold text-4xl'>
             CONTACT ME
           </p>
-          <div className='flex md:justify-end my-5'>
+          <div className='flex md:justify-start my-5'>
             <LineGradient width='w-1/2' />
           </div>
         </div>

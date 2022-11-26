@@ -103,7 +103,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, mode, setMode }) =
         
         {/* MOBILE POP-UP MENU */}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className='fixed right-0 bottom-0 h-full w-[300px] bg-frostblue'>
+          <div className='fixed left-0 bottom-0 h-full w-[250px] bg-[#f7f7f7] opacity-100'>
             {/* CLOSE ICON */}
             <div className='flex justify-end p-12'>
               <button

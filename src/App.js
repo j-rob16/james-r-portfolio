@@ -32,7 +32,7 @@ function App() {
         mode={mode}
         setMode={setMode}
       />
-      <div className='w-5/6 mx-auto'>
+      <div className='h-[100%] max-w-[100%]'>
         {isAboveMediumScreens && (
           <DotGroup 
             selectedPage={selectedPage}
@@ -45,11 +45,11 @@ function App() {
       </div>
       {/* <LineGradient /> */}
 
-      <div className='w-5/6 mx-auto'>
+      <div className='w-5/6 mx-auto h-[100%]'>
         <AboutMe />
       </div>
 
-      <div className='w-5/6 mx-auto'>
+      <div className='w-5/6 mx-auto h-[100%]'>
         <Projects />
       </div>
 
