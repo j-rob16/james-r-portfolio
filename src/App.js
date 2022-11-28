@@ -10,6 +10,7 @@ import Contact from './scenes/Contact';
 
 function App() {
   const [mode, setMode] = useState('light');
+  const [language, setLanguage] = useState('english');
   const [selectedPage, setSelectedPage] = useState('home');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -31,6 +32,8 @@ function App() {
         setSelectedPage={setSelectedPage}
         mode={mode}
         setMode={setMode}
+        language={language}
+        setLanguage={setLanguage}
       />
       <div className='h-[100%] max-w-[100%]'>
         {isAboveMediumScreens && (
@@ -41,6 +44,7 @@ function App() {
         )}
         <Home 
           setSelectedPage={setSelectedPage}
+          language={language}
         />
       </div>
       {/* <LineGradient /> */}

@@ -2,8 +2,9 @@ import { motion } from 'framer-motion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import SocialMediaIcons from '../components/SocialMediaIcons';
 import useMediaQuery from '../hooks/useMediaQuery';
+import languageSet from '../languageSet';
 
-const Home = ({ setSelectedPage }) => {
+const Home = ({ language ,setSelectedPage }) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
@@ -12,32 +13,6 @@ const Home = ({ setSelectedPage }) => {
       className='md:flex md:justify-between md:items-center md:h-full py-10 mb-48
                  bg-bridge bg-cover bg-no-repeat w-[100%] h-[100%]'
     >
-      {/* IMAGE SECTION */}
-      {/* <div className='md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32'>
-        {isAboveMediumScreens ? (
-        <div 
-          className='relative z-0 ml-20 before:absolute before:-bottom-8 hover:before:-bottom-5 before:-left-8 hover:before:-left-5
-                     before:rounded-3xl before:w-full before:max-w-[600px] before:h-full
-                     before:border-2 before:border-[#829CBC] before:z-[-1]'        
-        >
-          <img 
-            alt='profile'
-            src='assets/james-profile.jpeg'
-            className='max-w-[400px] md:max-w-[450px] xl:max-w-[600px] rounded-3xl
-                       hover:filter'
-          />
-        </div>
-        ) : (
-          <div>
-            <img 
-              alt='profile'
-              src='assets/james-profile.jpeg'
-              className='hover:filter hover:saturate-150 transition duration-500 z-10 w-full
-                max-w-[400px] md:max-w-[600px] rounded-xl max-h-[550px]'
-            />
-          </div>
-        )}
-      </div> */}
 
       {/* MAIN SECTION */}
       <div className='z-30 basis-2/5 mt-48 md:mt-32'>
@@ -53,14 +28,14 @@ const Home = ({ setSelectedPage }) => {
           }}        
         >
           <div className='flex flex-col'>
-            <p className='font-playfair text-sm text-left text-white'>Hi, I'm</p>
+            <p className='font-playfair text-sm text-left text-white'>{languageSet[language].hi}</p>
             <p
               className='text-5xl font-playfair z-10 text-center md:text-start mb-2
                         text-redHighlight transition duration-700'
             >
-            James {""} Robbins
+            {languageSet[language].name}
             </p>
-            <p className='font-playfair text-sm text-right text-white'>A Junior Software Developer</p>
+            <p className='font-playfair text-sm text-right text-white'>{languageSet[language].hi2}</p>
 
           </div>
         </motion.div>
