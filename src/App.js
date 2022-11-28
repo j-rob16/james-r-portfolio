@@ -54,7 +54,7 @@ function App() {
         />
       </div>
 
-      <div className='mx-auto h-[100%]'>
+      <div className='w-5/6 mx-auto h-[100%]'>
         <Projects
           language={language}
         />

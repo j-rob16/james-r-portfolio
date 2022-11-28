@@ -1,7 +1,7 @@
 const projects = [
   {
     description: 'A project built in 14 days as a team of 4',
-    image: './assets/gamegroupproject.png',
+    image: 'gamegroupproject',
     title: 'Game Group Project',
   },
   {

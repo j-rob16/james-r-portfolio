@@ -7,11 +7,11 @@ const projectVariant = {
 }
 
 const Project = ({ index }) => {
-  const overlayStyles = `absolute h-[118%] w-full opacity-100 hover:opacity-90 transition duration-500 hover:cursor-pointer
+  const overlayStyles = `absolute h-full w-full opacity-100 hover:opacity-90 transition duration-500 hover:cursor-pointer
                          bg-gradient-to-r from-transparent to-black z-[30] flex flex-col justify-center items-end p-16`
 
   return (
-    <div>
+    <div className={`bg-gamegroupproject h-full w-5/6`}>
         <div className={overlayStyles}>
           <div className='w-1/4 mr-5'>
             <h4 
@@ -26,14 +26,6 @@ const Project = ({ index }) => {
             </p>
           </div>
         </div>
-        <img
-          draggable="false"
-          src={projects[index].image}
-          key={index}
-          width='100%'
-          height='100%'
-          alt={projects[index].name}
-        />
     </div>
   );
 };

@@ -18,6 +18,10 @@ const container = {
 const Projects = ({ language }) => {
   const [index, setIndex] = useState(0);
 
+  const incrementIndex = () => {
+      setIndex(index + 1)
+  }
+
   return (
     <section 
       id='projects'
@@ -30,15 +34,16 @@ const Projects = ({ language }) => {
       </div>
       <div>
         <button
-          onClick={() => setIndex(index + 1)}
+          onClick={incrementIndex}
         >
           <HiOutlineArrowSmLeft />
         </button>
         <button
-          onClick={() => setIndex(index - 1)}
+          onClick={() => setIndex(index -1)}
         >
           <HiOutlineArrowSmRight />
         </button>
+        {index}
       </div>
     </section>
   );
