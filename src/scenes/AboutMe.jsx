@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import LineGradient from '../components/LineGradient';
 import useMediaQuery from '../hooks/useMediaQuery';
+import languageSet from '../languageSet';
 
-const AboutMe = () => {
+const AboutMe = ({ language }) => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
@@ -14,7 +15,7 @@ const AboutMe = () => {
     >
 
       {/* IMAGE SECTION */}
-      <div className='md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32'>
+      <div className='md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:items-center'>
         {isAboveMediumScreens ? (
         <div 
           className='relative z-0 ml-20 before:absolute before:-bottom-8 hover:before:-bottom-5 before:-left-8 hover:before:-left-5
@@ -43,7 +44,7 @@ const AboutMe = () => {
           >
             <div>
               <p className='font-playfair font-semibold text-4xl'>
-                About Me
+                {languageSet[language].aboutMe}
               </p>
               <div className='flex justify-start mt-5'>
                 <LineGradient width='w-1/3' />
@@ -87,7 +88,7 @@ const AboutMe = () => {
         >
           <div>
             <p className='font-playfair font-semibold text-4xl'>
-              About Me
+              {languageSet[language].aboutMe}
             </p>
             <div className='flex justify-start mt-5'>
               <LineGradient width='w-1/3' />
@@ -171,7 +172,7 @@ const AboutMe = () => {
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 }
           }}
-          className='p-6 relative top-[-80px] rounded-b-2xl'
+          className='p-6 rounded-b-2xl'
         >
           <h4>Here are some of the technologies I have worked with recently:</h4>
           <ul className='grid grid-cols-2 p-4 mt-4 font-playfair text-md gap-3'>

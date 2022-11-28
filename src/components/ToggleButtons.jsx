@@ -13,16 +13,16 @@ const ToggleButtons = ({language, setLanguage, mode, setMode}) => {
         className='hover:cursor-pointer'
       >
         {mode === 'light' ? 
-            <CiLight className='w-[50%] h-[50%]' /> 
+            <CiLight className='w-[120%] h-[120%] pl-1' /> 
             : 
-            <MdDarkMode className='text-white w-[50%] h-[50%]'/>}
+            <MdDarkMode className='text-white w-[120%] h-[120%] pl-1'/>}
         </div>
 
         <div
         onClick={() => setLanguage(language === 'english' ? 'japanese' : 'english')}
         className='hover:cursor-pointer'
         >
-          <h5>{languageSet[language].lang}</h5>
+          <p className='text-sm'>{languageSet[language].lang}</p>
         </div>
 
     </div>

@@ -16,6 +16,7 @@ module.exports = {
       },
       backgroundImage: {
         bridge: "linear-gradient(to top, rgb(0,0,0,0), rgba(0,0,0, 0.7)), url('./assets/snow-bridge.jpg')",
+        gamegroupproject: "linear-gradient(to right, rgb(0,0,0,0), rgba(0,0,0, 1)), url('./assets/gamegroupproject.png')",
       },
       // backgroundImage: (theme) => ({
       //   // "gradient-rainbow": "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)",

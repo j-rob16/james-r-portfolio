@@ -47,14 +47,17 @@ function App() {
           language={language}
         />
       </div>
-      {/* <LineGradient /> */}
 
-      <div className='w-5/6 mx-auto h-[100%]'>
-        <AboutMe />
+      <div className='w-5/6 mx-auto'>
+        <AboutMe 
+          language={language}
+        />
       </div>
 
-      <div className='w-5/6 mx-auto h-[100%]'>
-        <Projects />
+      <div className='mx-auto h-[100%]'>
+        <Projects
+          language={language}
+        />
       </div>
 
       <div className='w-5/6 mx-auto md:h-full'>

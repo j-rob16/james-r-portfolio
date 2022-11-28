@@ -11,7 +11,7 @@ const Home = ({ language ,setSelectedPage }) => {
     <section
       id='home'
       className='md:flex md:justify-between md:items-center md:h-full py-10 mb-48
-                 bg-bridge bg-cover bg-no-repeat w-[100%] h-[100%]'
+                 bg-bridge bg-cover bg-fixed bg-no-repeat w-[100%] h-[100%]'
     >
 
       {/* MAIN SECTION */}
@@ -73,7 +73,7 @@ const Home = ({ language ,setSelectedPage }) => {
             onClick={() => setSelectedPage("contact")}
             href='#contact'
           >
-            Contact Me
+            {languageSet[language].contactMe}
           </AnchorLink>
           {/* <AnchorLink
             className='rounded-r-sm bg-burnt hover:bg-crayola hover:pl-0.5 py-0.5 pr-0.5'
