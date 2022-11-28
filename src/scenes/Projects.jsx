@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Carousel from 'framer-motion-carousel';
 import projects from '../projects';
+import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from 'react-icons/hi';
 import Project from '../components/Project';
 import languageSet from '../languageSet';
 
@@ -14,22 +16,29 @@ const container = {
 };
 
 const Projects = ({ language }) => {
+  const [index, setIndex] = useState(0);
+
   return (
     <section 
       id='projects'
       className=''
     > 
-      <div className='flex flex-col w-5/6 mx-auto my-0 h-[550px] border-[0.5px] border-gray-400 rounded-2xl p-4'>
-        <Carousel
-          interval={20000}
+      <div className='my-0 h-[550px]rounded-2xl'>
+        <Project 
+          index={index}
+        />
+      </div>
+      <div>
+        <button
+          onClick={() => setIndex(index + 1)}
         >
-          {projects.map((project, i) => (
-            <Project 
-              project={project}
-              i={i}
-            />
-          ))}
-        </Carousel>
+          <HiOutlineArrowSmLeft />
+        </button>
+        <button
+          onClick={() => setIndex(index - 1)}
+        >
+          <HiOutlineArrowSmRight />
+        </button>
       </div>
     </section>
   );
