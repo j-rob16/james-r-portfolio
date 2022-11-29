@@ -16,52 +16,23 @@ const container = {
 };
 
 const Projects = ({ language }) => {
-  const [index, setIndex] = useState(0);
-
-  const incrementIndex = () => {
-      setIndex(index + 1)
-  }
 
   return (
     <section 
       id='projects'
-      className=''
+      className='mt-48'
     > 
-      <div className='my-0 h-[550px]rounded-2xl'>
-        <Project 
-          index={index}
-        />
-      </div>
-      <div>
-        <button
-          onClick={incrementIndex}
-        >
-          <HiOutlineArrowSmLeft />
-        </button>
-        <button
-          onClick={() => setIndex(index -1)}
-        >
-          <HiOutlineArrowSmRight />
-        </button>
-        {index}
-      </div>
+      {projects.map((project, i) => {
+        return (
+          <Project 
+            project={project}
+            key={i}
+          />
+
+        )
+      })}
     </section>
   );
 };
 
 export default Projects;
-
-            {
-              /* <div>
-                            <img
-                              draggable="false"
-                              src={project.image}
-                              key={i}
-                              width="100%"
-                              alt={project.name}
-                              className='bg-gradient-to-r '
-                            />
-                            <h4 className='text-center'>{project.title}</h4>
-                            <p>{project.description}</p>
-                          </div> */
-            }
