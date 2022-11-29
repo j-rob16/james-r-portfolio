@@ -87,7 +87,7 @@ const AboutMe = ({ language }) => {
             className='w-full mx-auto text-left'
         >
           <div>
-            <p className='font-playfair font-semibold text-4xl'>
+            <p className='font-playfair font-semibold text-4xl text-redHighlight'>
               {languageSet[language].aboutMe}
             </p>
             <div className='flex justify-start mt-5'>

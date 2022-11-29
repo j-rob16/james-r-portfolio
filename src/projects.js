@@ -5,7 +5,7 @@ const projects = [
     title: 'Game Group Project',
   },
   {
-    description: '',
+    description: 'A group project built over 7 days. We built this educational application to teach young teenagers about the solar system and all its planets. The application utilises API data fron Nasa to show the user real images of the solar system along with accurate data & charts.',
     image: 'nasagroupproject',
     title: 'Nasa Group Project'
   }
