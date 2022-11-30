@@ -18,7 +18,7 @@ const projects = [
     image: 'nasagroupproject',
     title: {
       english: 'NASA Group Project',
-      japanese: 'NASA グループプロジェクト'
+      japanese: 'NASA・グループ・プロジェクト'
     }
   }
 ];

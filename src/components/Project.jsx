@@ -9,7 +9,7 @@ const projectVariant = {
 const Project = ({ project, language }) => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
   const projectBackground = project.title['english'].split(" ").join("-").toLowerCase();
-  const overlayStyles = `absolute h-full w-full opacity-100
+  const overlayStyles = `absolute h-full w-full opacity-100 overflow-none
                          bg-gradient-to-r from-transparent to-black z-[30] flex flex-col justify-center items-end p-16 overflow-none`
 
   return (
