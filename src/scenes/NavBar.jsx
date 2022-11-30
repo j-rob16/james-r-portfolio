@@ -19,8 +19,7 @@ const Link = ({ page, selectedPage, setSelectedPage, isTopOfPage, title }) => {
       className={`
         ${selectedPage === lowerCasePage ? "text-redHighlight border-b-redHighlight border-b-4" : "text-[#f7f7f7]"}
         ${isTopOfPage ? "hover:text-[#f7f7f7]" : " text-charcoal"}
-        transition duration-500 h-[100%] py-2 px-4
-        `}  
+        transition duration-500 h-[100%] py-2 px-4`}  
         href={`#${lowerCasePage}`}
         onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -41,11 +40,11 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, mode, setMode, lan
         {/* DESKTOP NAV */}
         {isAboveSmallScreens ? (
         <>
-          <h4 className='font-playfair text-4xl font-bold text-redHighlight'><span className='text-blue text-5xl'>J</span>R</h4>
+          <h4 className={`${languageSet[language].font} text-4xl font-bold text-redHighlight`}><span className='text-blue text-5xl'>J</span>R</h4>
 
           <div className='flex items-center absolute right-10'>
           {/* NAV LINKS */}
-            <div className='flex justify-between gap-10 font-opensans text-sm font-semibold mr-16 px-4 border-b-[0.5px] border-black'>
+            <div className={`flex justify-between gap-10 ${languageSet[language].font} text-sm font-bold mr-16 px-4 border-b-[0.5px] border-black`}>
               <Link 
                 page='Home'
                 title={languageSet[language].home}
@@ -127,7 +126,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, mode, setMode, lan
             </div>
 
             {/* MENU ITEMS */}
-            <div className='flex flex-col gap-10 ml-[33%] text-2xl'>
+            <div className={`${languageSet[language].font} flex flex-col gap-10 ml-[33%] text-2xl`}>
               <Link 
                 page='Home'
                 title={languageSet[language].home}

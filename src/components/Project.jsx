@@ -5,8 +5,8 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 }
 }
 
-const Project = ({ project }) => {
-  const projectBackground = project.title.split(" ").join("-").toLowerCase();
+const Project = ({ project, language }) => {
+  const projectBackground = project.title['english'].split(" ").join("-").toLowerCase();
   const overlayStyles = `absolute h-full w-full opacity-100
                          bg-gradient-to-r from-transparent to-black z-[30] flex flex-col justify-center items-end p-16 overflow-none`
 
@@ -16,17 +16,17 @@ const Project = ({ project }) => {
           <h4 
             className='text-white mb-5 text-xl font-playfair'
           >
-            {project.title}
+            {project.title[language]}
           </h4>
           <p
             className='text-white text-right font-playfair max-w-[12rem]'
           >
-            {project.description}
+            {project.description[language]}
           </p>
       </div>
       <img 
         src={`../assets/${projectBackground}.png`}
-        alt={project.title}
+        alt={project.title[language]}
       />
     </div>
   );

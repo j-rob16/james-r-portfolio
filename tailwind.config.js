@@ -25,7 +25,8 @@ module.exports = {
       // }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
-        opensans: ["Open Sans", "sans-serif"]
+        opensans: ["Open Sans", "sans-serif"],
+        serifjp: ["Noto Serif Japanese", "serif"]
       },
       content: {
         splatter: "url('./assets/splatter.png')",

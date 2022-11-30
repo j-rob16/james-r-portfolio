@@ -43,7 +43,7 @@ const AboutMe = ({ language }) => {
               className='w-full mx-auto text-left'
           >
             <div>
-              <p className='font-playfair font-semibold text-4xl'>
+              <p className={`${languageSet[language].font} text-redHighlight font-semibold text-4xl`}>
                 {languageSet[language].aboutMe}
               </p>
               <div className='flex justify-start mt-5'>
@@ -87,7 +87,7 @@ const AboutMe = ({ language }) => {
             className='w-full mx-auto text-left'
         >
           <div>
-            <p className='font-playfair font-semibold text-4xl text-redHighlight'>
+            <p className={`${languageSet[language].font} font-semibold text-4xl text-redHighlight`}>
               {languageSet[language].aboutMe}
             </p>
             <div className='flex justify-start mt-5'>
@@ -95,13 +95,7 @@ const AboutMe = ({ language }) => {
             </div>
           </div>
         </motion.div>
-          <p className='font-playfair text-left'><span className='text-5xl relative top-1 right-2'>A</span> Software developer proficient in JavaScript, Python and Java seeking positions in Front End/Full Stack Software Development. From Scotland but currently based in Niseko, Japan.
-              A highly motivated software developer student, aiming to kickstart my career in a field that offers me the chance to be intellectually stimulated while continuing to develop my skills as a lifelong learner. 
-
-              Chronically curious and globally minded, my drive to better understand and experience the world has led me to spend the last 10 years living abroad - starting in New Zealand and now living long term in Japan. 
-
-              My desire to understand how things work first sparked my curiosity in software development, this then transformed from a desire to simply understand software to becoming a software developer myself. After 12 months of self-studying at home, I enrolled in CodeClan's Professional Software Development bootcamp in order to add more structure to my self taught learning. I am now seeking to transition into a career as a Software Developer.
-          </p>
+          <p className={`${languageSet[language].font} text-left`}>{languageSet[language].aboutMeBlurb}</p>
         </motion.div>
 
         <motion.div
@@ -115,8 +109,8 @@ const AboutMe = ({ language }) => {
           }}
           className='p-6 rounded-b-2xl'
         >
-          <h4>Here are some of the technologies I have worked with recently:</h4>
-          <ul className='grid grid-cols-2 p-4 mt-4 font-playfair text-md gap-3'>
+          <h4 className={`${languageSet[language].font} text-xl text-redHighlight`}>Here are some of the technologies I have worked with recently:</h4>
+          <ul className={`grid grid-cols-2 p-4 mt-4 ${languageSet[language].font} text-md gap-3`}>
             <li className='flex flex-row'>
               <p>JavaScript (ES6+)</p>
             </li>
@@ -154,13 +148,7 @@ const AboutMe = ({ language }) => {
           }}
           className='mt-20 p-6'
         >
-          <p className='font-playfair text-center'><span className='text-4xl relative top-1 right-2'>A</span> Software developer proficient in JavaScript, Python and Java seeking positions in Front End/Full Stack Software Development. From Scotland but currently based in Niseko, Japan.
-              A highly motivated software developer student, aiming to kickstart my career in a field that offers me the chance to be intellectually stimulated while continuing to develop my skills as a lifelong learner. 
-
-              Chronically curious and globally minded, my drive to better understand and experience the world has led me to spend the last 10 years living abroad - starting in New Zealand and now living long term in Japan. 
-
-              My desire to understand how things work first sparked my curiosity in software development, this then transformed from a desire to simply understand software to becoming a software developer myself. After 12 months of self-studying at home, I enrolled in CodeClan's Professional Software Development bootcamp in order to add more structure to my self taught learning. I am now seeking to transition into a career as a Software Developer.
-          </p>
+          <p className={`${languageSet[language].font} text-center`}>{languageSet[language].aboutMeBlurb}</p>
         </motion.div>
 
         <motion.div
@@ -174,8 +162,8 @@ const AboutMe = ({ language }) => {
           }}
           className='p-6 rounded-b-2xl'
         >
-          <h4>Here are some of the technologies I have worked with recently:</h4>
-          <ul className='grid grid-cols-2 p-4 mt-4 font-playfair text-md gap-3'>
+          <h4 className={`${languageSet[language].font} text-redHighlight`}>{languageSet[language].technologiesTitle}</h4>
+          <ul className={`grid grid-cols-2 p-4 mt-4 ${languageSet[language].font} text-md gap-3`}>
             <li className='flex flex-row'>
               <p>JavaScript (ES6+)</p>
             </li>

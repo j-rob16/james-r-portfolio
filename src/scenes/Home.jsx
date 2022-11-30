@@ -28,14 +28,14 @@ const Home = ({ language ,setSelectedPage }) => {
           }}        
         >
           <div className='flex flex-col'>
-            <p className='font-playfair text-sm text-left text-white'>{languageSet[language].hi}</p>
+            <p className={`${languageSet[language].font} text-sm text-left text-white`}>{languageSet[language].hi}</p>
             <p
-              className='text-5xl font-playfair z-10 text-center md:text-start mb-2
-                        text-redHighlight transition duration-700'
+              className={`${languageSet[language].font} text-5xl z-10 text-center md:text-start mb-2
+                        text-redHighlight transition duration-700`}
             >
             {languageSet[language].name}
             </p>
-            <p className='font-playfair text-sm text-right text-white'>{languageSet[language].hi2}</p>
+            <p className={`${languageSet[language].font} text-sm text-right text-white`}>{languageSet[language].hi2}</p>
 
           </div>
         </motion.div>
@@ -68,8 +68,9 @@ const Home = ({ language ,setSelectedPage }) => {
           className='flex justify-center'
         >
           <AnchorLink
-            className='bg-redHighlight text-[#f7f7f7] rounded-xl py-3 px-7 font-semibold
-                      hover:bg-[#f7f7f7] hover:text-redHighlight transition duration-500 hover:cursor-pointer'
+            className={`bg-redHighlight text-[#f7f7f7] rounded-xl py-3 px-7 font-semibold
+                      hover:bg-[#f7f7f7] hover:text-redHighlight transition duration-500 hover:cursor-pointer
+                      ${languageSet[language].font}`}
             onClick={() => setSelectedPage("contact")}
             href='#contact'
           >
