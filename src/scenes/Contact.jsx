@@ -1,8 +1,9 @@
-import LineGradient from '../components/LineGradient';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
+import LineGradient from '../components/LineGradient';
+import languageSet from '../languageSet';
 
-const Contact = () => {
+const Contact = ({ language }) => {
   const {
     register, 
     trigger, 
@@ -34,8 +35,8 @@ const Contact = () => {
         }}
       >
         <div>
-          <p className='font-playfair font-semibold text-4xl'>
-            CONTACT ME
+          <p className={`${languageSet[language].font} font-semibold text-redHighlight text-4xl`}>
+            {languageSet[language].contactMe}
           </p>
           <div className='flex md:justify-start my-5'>
             <LineGradient width='w-1/2' />
@@ -66,7 +67,7 @@ const Contact = () => {
             <input 
               className='w-full bg-blue font-semibold placeholder-opaque-black p-3'
               type='text'
-              placeholder='NAME'
+              placeholder={`${languageSet[language].formName}`}
               {...register('name', {
                 required: true,
                 maxLength: 100
@@ -83,7 +84,7 @@ const Contact = () => {
             <input 
               className='w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5'
               type='text'
-              placeholder='EMAIL'
+              placeholder={`${languageSet[language].formEmail}`}
               {...register('email', {
                 required: true,
                 pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -100,7 +101,7 @@ const Contact = () => {
             <textarea
               className='w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5'
               type='text'
-              placeholder='MESSAGE'
+              placeholder={`${languageSet[language].formMessage}`}
               rows='4'
               columns='50'
               {...register('message', {
@@ -118,10 +119,10 @@ const Contact = () => {
             {/* SUBMIT BUTTON */}
             <button
               type='submit'
-              className='p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red
+              className='p-5 bg-blue font-semibold text-white mt-5 hover:bg-red
                         hover:text-white transition duration-500'
             >
-              SEND ME A MESSAGE
+              {languageSet[language].formSubmit}
             </button>
           </form>
         </motion.div>

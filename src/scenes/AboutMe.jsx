@@ -109,7 +109,7 @@ const AboutMe = ({ language }) => {
           }}
           className='p-6 rounded-b-2xl'
         >
-          <h4 className={`${languageSet[language].font} text-xl text-redHighlight`}>Here are some of the technologies I have worked with recently:</h4>
+          <h4 className={`${languageSet[language].font} text-xl text-redHighlight`}>{languageSet[language].technologiesTitle}</h4>
           <ul className={`grid grid-cols-2 p-4 mt-4 ${languageSet[language].font} text-md gap-3`}>
             <li className='flex flex-row'>
               <p>JavaScript (ES6+)</p>
