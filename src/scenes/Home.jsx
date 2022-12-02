@@ -15,7 +15,8 @@ const Home = ({ language ,setSelectedPage }) => {
     >
 
       {/* MAIN SECTION */}
-      <div className='z-30 basis-2/5 mt-48 md:mt-32'>
+      <div className='z-30 basis-3/5 mt-48 md:mt-32'>
+        {/* NAME */}
         <motion.div
           className='flex justify-center items-center basis-3/5 mb-7'
           initial='hidden'
@@ -27,15 +28,17 @@ const Home = ({ language ,setSelectedPage }) => {
             visible: { opacity: 1, x: 0 }
           }}        
         >
-          <div className='flex flex-col'>
-            <p className={`${languageSet[language].font} text-sm text-left text-white`}>{languageSet[language].hi}</p>
+          <div className='flex flex-col pl-10'>
+            <p className={`${languageSet[language].font} text-sm text-center sm:text-left text-white`}>{languageSet[language].hi}</p>
             <p
               className={`${languageSet[language].font} text-5xl z-10 text-center md:text-start mb-2
                         text-redHighlight transition duration-700`}
             >
-            {languageSet[language].name}
+            <div className='flex flex-row flex-wrap justify-center'>
+              {languageSet[language].nameFirst}{" "}{languageSet[language].nameLast}
+            </div>
             </p>
-            <p className={`${languageSet[language].font} text-sm text-right text-white`}>{languageSet[language].hi2}</p>
+            <p className={`${languageSet[language].font} text-sm text-center sm:text-right text-white`}>{languageSet[language].hi2}</p>
 
           </div>
         </motion.div>
@@ -103,7 +106,9 @@ const Home = ({ language ,setSelectedPage }) => {
           }}
           className='flex mt-5 justify-center'
         >
-          <SocialMediaIcons />
+          <SocialMediaIcons 
+            width={'w-3/5'}
+          />
         </motion.div>
       </div>
     </section>

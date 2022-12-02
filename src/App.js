@@ -37,12 +37,12 @@ function App() {
         setLanguage={setLanguage}
       />
       <div className='h-[100%] max-w-[100%]'>
-        {isAboveMediumScreens && (
+        {/* {isAboveMediumScreens && (
           <DotGroup 
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
-        )}
+        )} */}
         <Home 
           setSelectedPage={setSelectedPage}
           language={language}

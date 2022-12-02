@@ -6,7 +6,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
                           before:left-[-50%] before:top-[-50%]`
 
   return (
-    <div className='flex flex-col gap-6 fixed top-[60%] right-7'>
+    <div className='flex flex-col gap-6 fixed top-[60%] right-7 z-50'>
       <AnchorLink
         className={`
           ${

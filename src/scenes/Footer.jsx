@@ -1,13 +1,18 @@
 import SocialMediaIcons from '../components/SocialMediaIcons';
+import languageSet from '../languageSet';
 
-const Footer = () => {
+const Footer = ({ language }) => {
+  const order = language === 'japanese' ? 'order-2' : '';
+
   return (
-    <footer className='h-64 bg-red pt-10'>
-      <div className='w-5/6 mx-auto flex flex-col md:flex-row justify-center md:justify-between'>
-        <SocialMediaIcons />
-        <div className='md:flex justify-center md:justify-end text-center items-center'>
-          <p className='font-playfair text-md text-yellow mr-2'>A portfolio coded by:</p>
-          <p className='font-playfair font-semibold text-2xl text-yellow'>JAMES ROBBINS</p>
+    <footer className='h-64 bg-red pt-10 md:pt-32'>
+      <div className='w-5/6 mx-auto flex flex-col sm:flex-row justify-center md:justify-around items-center'>
+        <SocialMediaIcons 
+          width={'w-1/3'}
+        />
+        <div className='md:flex justify-center md:justify-end text-center items-center sm:ml-4 gap-1'>
+          <p className={`${order} ${languageSet[language].font} text-md text-yellow mr-2`}>{languageSet[language].footer}</p>
+          <p className={`${languageSet[language].font} font-semibold text-2xl text-redHighlight`}>{languageSet[language].nameFirst}{" "}{languageSet[language].nameLast}</p>
         </div>
       </div>
     </footer>

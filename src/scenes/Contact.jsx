@@ -20,7 +20,7 @@ const Contact = ({ language }) => {
   return (
     <section
       id='contact'
-      className='py-48'
+      className='pt-48'
     >
       {/* HEADING */}
       <motion.div
@@ -45,7 +45,7 @@ const Contact = ({ language }) => {
       </motion.div>
 
       {/* FORM */}
-      <div className='md:flex md:justify-between gap-16 mt-5'>
+      <div className='md:flex md:justify-between gap-16 p-5 bg-slate-400'>
         <motion.div
           initial='hidden'
           whileInView='visible'
@@ -55,7 +55,7 @@ const Contact = ({ language }) => {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 }
           }}     
-          className='basis-1/2 mt-10 md:mt-0'   
+          className='basis-1/2 md:mt-0'   
         >
           <form
             target='_blank'

@@ -1,9 +1,9 @@
-const SocialMediaIcons = () => {
+const SocialMediaIcons = ({width}) => {
   return (
-    <div className='flex justify-center my-10 gap-7 w-3/5'>
+    <div className={`flex justify-center my-10 gap-7 ${width}`}>
       <a
         className='hover:opacity-50 transition duration-500'
-        href='https://www.github.com'
+        href = 'https://www.github.com/j-rob16'
         target='_blank'
         rel="noreferrer"
       >
@@ -15,7 +15,7 @@ const SocialMediaIcons = () => {
       </a>
       <a
         className='hover:opacity-50 transition duration-500'
-        href='https://www.linkedin.com'
+        href='https://www.linkedin.com/in/016-james-robbins'
         target='_blank'
         rel="noreferrer"
       >
@@ -28,7 +28,7 @@ const SocialMediaIcons = () => {
 
       <a
         className="hover:opacity-50 transition duration-500 max-h-[100px]"
-        href='https://www.instagram.com'
+        href='https://www.instagram.com/jimm3r1sh/'
         target='_blank'
         rel="noreferrer"
       >

@@ -40,7 +40,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, mode, setMode, lan
         {/* DESKTOP NAV */}
         {isAboveSmallScreens ? (
         <>
-          <h4 className={`${languageSet[language].font} text-4xl font-bold text-redHighlight`}><span className='text-blue text-5xl'>J</span>R</h4>
+          <h4 className='font-playfair text-4xl font-bold text-redHighlight'><span className='text-blue text-5xl'>J</span>R</h4>
 
           <div className='flex items-center absolute right-10'>
           {/* NAV LINKS */}
