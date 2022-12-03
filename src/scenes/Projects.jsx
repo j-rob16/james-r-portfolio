@@ -16,6 +16,7 @@ const container = {
 };
 
 const Projects = ({ language }) => {
+  const [projectIndex, setProjectIndex] = useState(0);
 
   return (
     <section 
@@ -24,17 +25,21 @@ const Projects = ({ language }) => {
     > 
     <h4 className={`${languageSet[language].font} text-redHighlight text-center text-4xl`}>{languageSet[language].projects}</h4>
     <p className={`${languageSet[language].font} text-center mt-4`}>{languageSet[language].projectsSubtitle}</p>
-    <div>
-      {projects.map((project, i) => {
-        return (
-          <Project 
-            project={project}
-            key={i}
-            language={language}
-          />
+    <div className='w-full p-5 md:p-0'>
+      <Carousel
+        interval={20000}
+      >
+        {projects.map((project, i) => {
+          return (
+            <Project 
+              project={project}
+              key={i}
+              language={language}
+            />
 
-        )
-      })}
+          )
+        })}
+      </Carousel>
     </div>
     </section>
   );

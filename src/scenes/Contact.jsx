@@ -45,7 +45,7 @@ const Contact = ({ language }) => {
       </motion.div>
 
       {/* FORM */}
-      <div className='md:flex md:justify-between gap-16 p-5 bg-slate-400'>
+      <div className='md:flex md:justify-between gap-16 p-5 bg-slate-400 rounded-xl'>
         <motion.div
           initial='hidden'
           whileInView='visible'
