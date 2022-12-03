@@ -35,7 +35,9 @@ const Home = ({ language ,setSelectedPage }) => {
                         text-redHighlight transition duration-700`}
             >
             <div className='flex flex-row flex-wrap justify-center'>
-              {languageSet[language].nameFirst}{" "}{languageSet[language].nameLast}
+              <span className={language === 'japanese' ? 'order-2' : ''}>{languageSet[language].nameFirst}</span>
+              <span>{" "}</span>
+              <span>{languageSet[language].nameLast}</span>
             </div>
             </p>
             <p className={`${languageSet[language].font} text-sm text-center sm:text-right text-white`}>{languageSet[language].hi2}</p>

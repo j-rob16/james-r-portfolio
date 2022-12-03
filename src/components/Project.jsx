@@ -6,11 +6,11 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 }
 }
 
-const Project = ({ project, language }) => {
+const Project = ({ project, key, language }) => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
   const projectBackground = project.title['english'].split(" ").join("-").toLowerCase();
   const overlayStyles = `absolute h-full w-full opacity-100 overflow-none
-                         md:bg-gradient-to-r from-transparent to-black z-[30] flex flex-col justify-center items-end p-16 overflow-none`
+                         sm:bg-gradient-to-r from-transparent to-black z-[30] flex flex-col justify-center items-end p-16 overflow-none`
 
   return (
     <>
@@ -46,7 +46,7 @@ const Project = ({ project, language }) => {
         </h4>
         <div className=''>
             <p
-              className='text-charcoal text-sm text-center font-playfair max-w-[12rem]'
+              className={`text-charcoal text-sm text-center ${project.font[language]}`}
             >
               {project.description[language]}
             </p>
