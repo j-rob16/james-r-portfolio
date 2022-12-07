@@ -28,7 +28,7 @@ const Home = ({ language ,setSelectedPage }) => {
             visible: { opacity: 1, x: 0 }
           }}        
         >
-          <div className='flex flex-col pl-10'>
+          <div className='flex flex-col'>
             <p className={`${languageSet[language].font} text-sm text-center sm:text-left text-white`}>{languageSet[language].hi}</p>
             <p
               className={`${languageSet[language].font} text-5xl z-10 text-center md:text-start mb-2
@@ -57,7 +57,9 @@ const Home = ({ language ,setSelectedPage }) => {
           }}
           className='flex justify-center mb-10'
         >
-
+          <p
+            className={`w-3/5 text-center ${languageSet[language].font} text-slate-100`}
+          >{languageSet[language].intro}</p>
         </motion.div>
 
         {/* CONTACT ME SECTION */}

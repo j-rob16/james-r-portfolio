@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import NavBar from './scenes/NavBar';
 import useMediaQuery from './hooks/useMediaQuery';
 import DotGroup from './components/DotGroup';
@@ -36,36 +37,48 @@ function App() {
         language={language}
         setLanguage={setLanguage}
       />
-      <div className='h-[100%] max-w-[100%]'>
-        {/* {isAboveMediumScreens && (
+      <motion.div 
+        className='h-[100%] max-w-[100%]'
+        onViewportEnter={() => setSelectedPage('home')}
+      >
+        {isAboveMediumScreens && (
           <DotGroup 
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
-        )} */}
-        <Home 
-          setSelectedPage={setSelectedPage}
-          language={language}
-        />
-      </div>
+        )}
+          <Home 
+            setSelectedPage={setSelectedPage}
+            language={language}
+          />
+      </motion.div>
 
-      <div className='w-5/6 mx-auto'>
+      <motion.div 
+        className='w-5/6 mx-auto'
+        onViewportEnter={() => setSelectedPage('about')}
+      >
         <AboutMe 
           language={language}
         />
-      </div>
+      </motion.div>
 
-      <div className='w-full mx-auto'>
+      <motion.div 
+        className='w-full mx-auto'
+        onViewportEnter={() => setSelectedPage('projects')}
+      >
         <Projects
           language={language}
         />
-      </div>
+      </motion.div>
 
-      <div className='w-5/6 mx-auto md:h-full'>
+      <motion.div 
+        className='w-5/6 mx-auto md:h-full'
+        onViewportEnter={() => setSelectedPage('contact')}
+      >
         <Contact 
           language={language}
         />
-      </div>
+      </motion.div>
 
       <Footer 
         language={language}

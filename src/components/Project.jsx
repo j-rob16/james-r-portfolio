@@ -31,6 +31,7 @@ const Project = ({ project, key, language }) => {
         <img 
           src={`../assets/${projectBackground}.png`}
           alt={project.title[language]}
+          className='min-w-full'
         />
       </div>
     ) : (
