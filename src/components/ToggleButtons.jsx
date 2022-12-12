@@ -5,8 +5,8 @@ import languageSet from '../languageSet';
 
 const ToggleButtons = ({language, setLanguage, darkMode, setDarkMode}) => {
   return (
-    <div className='fixed bg-gray-400 rounded-l-lg right-0 my-auto w-28 h-14
-                    flex items-center justify-around'
+    <div className={`fixed bg-gray-300 dark:bg-gray-700 rounded-l-lg right-0 my-auto w-28 h-14
+                    flex items-center justify-around`}
     >
       <div
         onClick={() => setDarkMode(!darkMode)}
