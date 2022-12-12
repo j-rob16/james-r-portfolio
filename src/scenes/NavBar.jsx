@@ -6,13 +6,13 @@ import ToggleButtons from '../components/ToggleButtons';
 import useMediaQuery from '../hooks/useMediaQuery';
 import languageSet from '../languageSet';
 
-const Link = ({ page, selectedPage, setSelectedPage, isTopOfPage, title }) => {
+const Link = ({ page, selectedPage, setSelectedPage, isTopOfPage, title, darkMode }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
       className={`
-        ${selectedPage === lowerCasePage ? 'text-redHighlight border-b-redHighlight border-b-4' : isTopOfPage ? 'text-[#f7f7f7]' : 'text-charcoal'}
-        ${isTopOfPage ? 'hover:text-[#f7f7f7]' : 'text-charcoal'}
+        ${selectedPage === lowerCasePage ? 'text-redHighlight border-b-redHighlight border-b-4' : isTopOfPage ? 'text-[#f7f7f7]' : darkMode ? 'text-white' : 'text-charcoal'}
+        ${isTopOfPage ? '' : darkMode ? 'text-white' : 'text-charcoal'}
         transition duration-500 h-[100%] py-2 px-4`}  
         href={`#${lowerCasePage}`}
         onClick={() => setSelectedPage(lowerCasePage)}
@@ -25,7 +25,7 @@ const Link = ({ page, selectedPage, setSelectedPage, isTopOfPage, title }) => {
 const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, darkMode, setDarkMode, language, setLanguage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
-  const navBarBackground = isTopOfPage ? '' : 'bg-[#ffffff] shadow-black shadow-md opacity-90';
+  const navBarBackground = isTopOfPage ? '' : `shadow-black shadow-md opacity-90 ${darkMode ? 'dark' : 'light'}`;
 
   return (
     <nav className={`${navBarBackground} z-40 w-full fixed top-0 py-6`}>
@@ -45,6 +45,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, darkMode, setDarkM
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
                 isTopOfPage={isTopOfPage}
+                darkMode={darkMode}
               />
               <Link 
                 page='About'
@@ -52,6 +53,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, darkMode, setDarkM
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
                 isTopOfPage={isTopOfPage}
+                darkMode={darkMode}
               />
               <Link 
                 page='Projects'
@@ -59,6 +61,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, darkMode, setDarkM
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
                 isTopOfPage={isTopOfPage}
+                darkMode={darkMode}
               />
               <Link 
                 page='Contact'
@@ -66,6 +69,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, darkMode, setDarkM
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
                 isTopOfPage={isTopOfPage}
+                darkMode={darkMode}
               />
             </div>
           </div>
@@ -131,6 +135,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, darkMode, setDarkM
                   title={languageSet[language].home}
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
+                  darkMode={darkMode}
                 />
 
               </div>
@@ -144,6 +149,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, darkMode, setDarkM
                   title={languageSet[language].about}
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
+                  darkMode={darkMode}
                 />
               </div>
 
@@ -156,6 +162,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, darkMode, setDarkM
                   title = {languageSet[language].projects}
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
+                  darkMode={darkMode}
                 />
               </div>
 
@@ -168,6 +175,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, darkMode, setDarkM
                   title={languageSet[language].contact}
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
+                  darkMode={darkMode}
                 />
 
               </div>

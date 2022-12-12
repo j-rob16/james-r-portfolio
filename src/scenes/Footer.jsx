@@ -1,11 +1,11 @@
 import SocialMediaIcons from '../components/SocialMediaIcons';
 import languageSet from '../languageSet';
 
-const Footer = ({ language }) => {
+const Footer = ({ language, darkMode }) => {
   const order = language === 'japanese' ? 'order-2' : '';
 
   return (
-    <footer className='h-64 bg-red pt-10 md:pt-32'>
+    <footer className={`h-64 bg-red pt-10 md:pt-32 ${darkMode ? 'dark' : 'light'}`}>
       <div className='w-5/6 mx-auto flex flex-col sm:flex-row justify-center md:justify-around items-center'>
         <SocialMediaIcons 
           width={'w-1/3'}

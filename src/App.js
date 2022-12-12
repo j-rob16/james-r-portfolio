@@ -25,8 +25,15 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const body = document.body;
+    body.classList.remove('dark');
+    body.classList.remove('light');
+    body.classList.add(darkMode ? 'dark' : 'light')
+  }, [darkMode])
+
   return (
-    <div className={`app ${darkMode ? 'dark' : 'light'}`}>
+    <div className='app'>
       <NavBar 
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -53,11 +60,12 @@ function App() {
       </motion.div>
 
       <motion.div 
-        className='w-5/6 mx-auto'
+        className={`w-5/6 mx-auto ${darkMode ? 'dark' : 'light'}`}
         onViewportEnter={() => setSelectedPage('about')}
       >
         <AboutMe 
           language={language}
+          darkMode={darkMode}
         />
       </motion.div>
 
@@ -67,6 +75,7 @@ function App() {
       >
         <Projects
           language={language}
+          darkMode={darkMode}
         />
       </motion.div>
 
@@ -76,11 +85,13 @@ function App() {
       >
         <Contact 
           language={language}
+          darkMode={darkMode}
         />
       </motion.div>
 
       <Footer 
         language={language}
+        darkMode={darkMode}
       />
     </div>
   );

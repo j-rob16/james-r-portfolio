@@ -3,7 +3,7 @@ import LineGradient from '../components/LineGradient';
 import useMediaQuery from '../hooks/useMediaQuery';
 import languageSet from '../languageSet';
 
-const AboutMe = ({ language }) => {
+const AboutMe = ({ language, darkMode }) => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
@@ -11,7 +11,7 @@ const AboutMe = ({ language }) => {
   return (
     <section
       id='about'
-      className='md:flex md:justify-between md:items-center md:h-full py-10 my-24'
+      className={`md:flex md:justify-between md:items-center md:h-full py-10 my-24 ${darkMode ? 'dark' : 'light'}`}
     >
 
       {/* IMAGE SECTION */}

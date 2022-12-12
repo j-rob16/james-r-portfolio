@@ -15,13 +15,13 @@ const container = {
   }
 };
 
-const Projects = ({ language }) => {
+const Projects = ({ language, darkMode }) => {
   const [projectIndex, setProjectIndex] = useState(0);
 
   return (
     <section 
       id='projects'
-      className='mt-48'
+      className={`mt-48 ${darkMode ? 'dark' : 'light'}`}
     > 
     <h4 className={`${languageSet[language].font} text-redHighlight text-center text-4xl`}>{languageSet[language].projects}</h4>
     <p className={`${languageSet[language].font} text-center mt-4`}>{languageSet[language].projectsSubtitle}</p>

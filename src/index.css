@@ -21,15 +21,9 @@ body,
 }
 
 .dark {
-  background-color: var(--clr-bg-dark);
-  color: var(--clr-text-dark);
+  @apply bg-gray-800 text-zinc-50
 }
 
 .light {
-  background-color: var(--clr-bg-light);
-  color: var(--clr-text-light);
+  @apply bg-zinc-50 text-gray-800
 }
-
-/* #010026 00A6A6 A7C6DA 2DE1FC 6290C8*/
-
-/* good dark mode color - 212529 */

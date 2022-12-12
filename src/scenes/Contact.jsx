@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import LineGradient from '../components/LineGradient';
 import languageSet from '../languageSet';
 
-const Contact = ({ language }) => {
+const Contact = ({ language, darkMode }) => {
   const {
     register, 
     trigger, 
@@ -20,7 +20,7 @@ const Contact = ({ language }) => {
   return (
     <section
       id='contact'
-      className='pt-48'
+      className={`pt-48 ${darkMode ? 'dark' : 'light'}`}
     >
       {/* HEADING */}
       <motion.div
