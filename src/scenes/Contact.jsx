@@ -45,7 +45,7 @@ const Contact = ({ language, darkMode }) => {
       </motion.div>
 
       {/* FORM */}
-      <div className='md:flex md:justify-between gap-16 p-5 bg-slate-400 rounded-xl'>
+      <div className='md:flex md:justify-center gap-16 p-5 bg-slate-400 rounded-xl'>
         <motion.div
           initial='hidden'
           whileInView='visible'
@@ -55,7 +55,7 @@ const Contact = ({ language, darkMode }) => {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 }
           }}     
-          className='basis-1/2 md:mt-0'   
+          className='md:mt-0'   
         >
           <form
             target='_blank'
@@ -119,8 +119,8 @@ const Contact = ({ language, darkMode }) => {
             {/* SUBMIT BUTTON */}
             <button
               type='submit'
-              className='p-5 bg-blue font-semibold text-white mt-5 hover:bg-red
-                        hover:text-white transition duration-500'
+              className='p-5 bg-blue font-semibold text-white mt-5
+                        hover:text-redHighlight transition duration-500'
             >
               {languageSet[language].formSubmit}
             </button>
