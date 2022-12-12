@@ -22,7 +22,7 @@ const Link = ({ page, selectedPage, setSelectedPage, isTopOfPage, title }) => {
   );
 };
 
-const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, mode, setMode, language, setLanguage }) => {
+const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, darkMode, setDarkMode, language, setLanguage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
   const navBarBackground = isTopOfPage ? '' : 'bg-[#ffffff] shadow-black shadow-md opacity-90';
@@ -72,8 +72,8 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, mode, setMode, lan
 
           {/* TOGGLE BUTTONS */}
           <ToggleButtons 
-            mode={mode}
-            setMode={setMode}
+            darkMode={darkMode}
+            setDarkMode={setDarkMode}
             language={language}
             setLanguage={setLanguage}
           />
@@ -97,8 +97,8 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, mode, setMode, lan
 
             {/* TOGGLE BUTTONS */}
             <ToggleButtons 
-              mode={mode}
-              setMode={setMode}
+              darkMode={darkMode}
+              setDarkMode={setDarkMode}
               language={language}
               setLanguage={setLanguage}
             />

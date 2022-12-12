@@ -4,14 +4,13 @@ import NavBar from './scenes/NavBar';
 import useMediaQuery from './hooks/useMediaQuery';
 import DotGroup from './components/DotGroup';
 import Home from './scenes/Home';
-import LineGradient from './components/LineGradient';
 import AboutMe from './scenes/AboutMe';
 import Projects from './scenes/Projects';
 import Contact from './scenes/Contact';
 import Footer from './scenes/Footer';
 
 function App() {
-  const [mode, setMode] = useState('light');
+  const [darkMode, setDarkMode] = useState(false);
   const [language, setLanguage] = useState('english');
   const [selectedPage, setSelectedPage] = useState('home');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
@@ -27,13 +26,13 @@ function App() {
   }, []);
 
   return (
-    <div className='app'>
+    <div className={`app ${darkMode ? 'dark' : 'light'}`}>
       <NavBar 
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
-        mode={mode}
-        setMode={setMode}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
         language={language}
         setLanguage={setLanguage}
       />
