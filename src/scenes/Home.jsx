@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import SocialMediaIcons from '../components/SocialMediaIcons';
-import useMediaQuery from '../hooks/useMediaQuery';
 import languageSet from '../languageSet';
 
 const Home = ({ language ,setSelectedPage }) => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
     <section

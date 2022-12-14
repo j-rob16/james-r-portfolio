@@ -1,10 +1,4 @@
-import { motion } from 'framer-motion';
 import useMediaQuery from '../hooks/useMediaQuery';
-
-const projectVariant = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1 }
-}
 
 const Project = ({ project, key, language }) => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
