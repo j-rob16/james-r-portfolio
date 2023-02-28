@@ -1,5 +1,5 @@
 James's Portfolio Website.
-The deployed site can be found at:
+The deployed site can be found at: https://jamesrportfolio.netlify.app/
 
 # Getting Started with Create React App
 
