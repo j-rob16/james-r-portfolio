@@ -32,7 +32,6 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -47,6 +46,9 @@
 
 <p>A portfolio project uilt to showcase my current work standards & the technologies I am currently working with.</p>
 <p><a href="https://jamesrportfolio.netlify.app/">The deployed portfolio can be found here!</a></p>
+Hosted Using: 
+
+* [![Netlify][Netlify-pic]][Netlify-url] 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -62,6 +64,7 @@ The following Languages, Frameworks & Libraries were used to build this project.
 * [![Node.js][Node-pic]][Node-url]
 * [![HTML5][HTML5-pic]][HTML5-url]
 * [![CSS3][CSS3-pic]][CSS3-url]
+* [![TailwindCSS][TailwindCSS-pic]][TailwindCSS-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,35 +145,6 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- Team -->
-## Contact
-
-Calum Cook
-* [![GitHub][GitHub-shield]][CalumGitHub]
-* [![LinkedIn][linkedin-shield]][CalumLinkedIn]
-
-James Robbins
-* [![GitHub][GitHub-shield]][JamesGitHub]
-* [![LinkedIn][linkedin-shield]][linkedin-url]
-
-Erik Sund
-* [![GitHub][GitHub-shield]][ErikGitHub]
-* [![LinkedIn][linkedin-shield]][ErikLinkedIn]
-
-Kenny Wands
-* [![GitHub][GitHub-shield]][KennyGitHub]
-* [![LinkedIn][linkedin-shield]][KennyLinkedIn]
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -241,6 +215,8 @@ Use this space to list resources you find helpful and would like to give credit 
 [Mocha-url]: https://mochajs.org/
 [MongoDB-pic]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
 [MongoDB-url]: https://www.mongodb.com/
+[Netlify-pic]: https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7
+[Netlify-url]: https://www.netlify.com/
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [Node-pic]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
@@ -253,51 +229,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [React-url]: https://reactjs.org/
 [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
 [Svelte-url]: https://svelte.dev/
+[TailwindCSS-pic]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[TailwindCSS-url]: https://https://tailwindcss.com/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
-
-
-
-James's Portfolio Website.
-The deployed site can be found at: https://jamesrportfolio.netlify.app/
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
