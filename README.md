@@ -113,12 +113,10 @@ Use this space to show useful examples of how a project can be used. Additional 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Create infographic to display planetary information
-- [ ] Expand infographic to contain moons & satellites
-- [x] Add Quiz section and save results to database
-- [ ] Update and Improve Quiz section
-- [x] Create graphs using the chart.js library
-- [ ] Expand the graphs to make them dynamic. Allow the user to select desired info
+- [x] Fix issues with contact-me box sizing
+- [ ] Fix issues on Safari with icon sizing
+- [x] Change the language tab buttons to reflect the language properly
+- [ ] Expand projects section with React-Router
 
 
 <!-- See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues). -->
