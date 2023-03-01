@@ -1,6 +1,6 @@
 const SocialMediaIcons = ({width}) => {
   return (
-    <div className={`flex justify-center my-10 gap-7 ${width}`}>
+    <div className={`flex justify-center my-10 gap-7 ${width} min-w-fit`}>
       <a
         className='hover:opacity-50 transition duration-500'
         href = 'https://www.github.com/j-rob16'
