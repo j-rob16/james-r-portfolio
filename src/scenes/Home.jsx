@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import SocialMediaIcons from '../components/SocialMediaIcons';
 import languageSet from '../languageSet';
+import ScrollPrompt from '../components/ScrollPrompt';
 
 const Home = ({ language ,setSelectedPage }) => {
 
@@ -113,6 +114,8 @@ const Home = ({ language ,setSelectedPage }) => {
           />
         </motion.div>
       </div>
+
+      <ScrollPrompt />
     </section>
   );
 };
