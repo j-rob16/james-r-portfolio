@@ -3,7 +3,6 @@ import Tilt from "react-parallax-tilt";
 import { fadeIn } from '../utils/motion';
 
 import github from '../assets/github.png'; 
-import languageSet from '../languageSet';
 
 const ProjectCard = ({ description, image, index, font, tags, title, source_code_link, language }) => {
   return (
