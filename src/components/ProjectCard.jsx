@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import Tilt from "react-parallax-tilt";
-import github from '../assets/github.png'; 
 import { fadeIn } from '../utils/motion';
 
+import github from '../assets/github.png'; 
+import languageSet from '../languageSet';
 
 const ProjectCard = ({ description, image, index, font, tags, title, source_code_link, language }) => {
   return (
@@ -38,10 +39,10 @@ const ProjectCard = ({ description, image, index, font, tags, title, source_code
         </div>
         {/* NAME & DESCRIPTION */}
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>
+          <h3 className={`${font[language]} text-white font-bold text-[24px]`}>
             {title[language]}
           </h3>
-          <p className='mt-2 text-secondary text-[14px]'>
+          <p className={`${font[language]} mt-2 text-secondary text-[14px]`}>
             {description[language]}
           </p>
         </div>

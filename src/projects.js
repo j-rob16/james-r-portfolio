@@ -22,7 +22,7 @@ const projects = [
       color: "orange-text-gradient",
       },
       {
-      name: 'react',
+      name: 'React',
       color: "blue-text-gradient",
       },
     ],
@@ -48,7 +48,7 @@ const projects = [
         color: "orange-text-gradient",
       },
       {
-      name: 'react',
+      name: 'React',
       color: "blue-text-gradient",
       }
     ],
