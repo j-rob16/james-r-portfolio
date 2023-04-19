@@ -28,13 +28,20 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, darkMode, setDarkM
   const navBarBackground = isTopOfPage ? '' : `shadow-black shadow-md opacity-90 ${darkMode ? 'dark' : 'light'}`;
 
   return (
-    <nav className={`${navBarBackground} z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${navBarBackground} z-40 w-full fixed top-0 py-3`}>
       <div className='flex items-center justify-between mx-auto w-5/6'>
 
         {/* DESKTOP NAV */}
         {isAboveSmallScreens ? (
         <>
-          <h4 className='font-playfair text-4xl font-bold text-redHighlight'><span className='text-blue text-5xl'>J</span>R</h4>
+          {/* <h4 className='font-playfair text-4xl font-bold text-redHighlight'><span className='text-blue text-5xl'>J</span>R</h4> */}
+          <div className={`p-3 rounded-2xl ${isTopOfPage ? '' : 'bg-redHighlight'}`}>
+            <img 
+              src='logo.svg' 
+              alt='logo' 
+              className='max-h-[60px] max-w-[60px]'
+            />
+          </div>
 
           <div className='flex items-center absolute right-10'>
           {/* NAV LINKS */}
@@ -97,7 +104,15 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, darkMode, setDarkM
             </button>
 
             {/* LOGO */}
-            <h4 className='font-playfair mx-auto pr-10 text-4xl font-bold text-redHighlight'><span className='text-blue text-5xl'>J</span>R</h4>
+          <div 
+            className={`p-3 rounded-2xl mx-auto ${isTopOfPage ? '' : 'bg-redHighlight'}`}
+          >
+            <img 
+              src='logo.svg' 
+              alt='logo' 
+              className='max-h-[30px] max-w-[30px]'
+            />
+          </div>
 
             {/* TOGGLE BUTTONS */}
             <ToggleButtons 

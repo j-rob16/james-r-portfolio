@@ -1,3 +1,6 @@
+import gamegroupproject from './assets/gamegroupproject.png';
+import nasagroupproject from './assets/nasagroupproject.png';
+
 const projects = [
   {
     description: {
@@ -8,11 +11,22 @@ const projects = [
       english: 'font-playfair',
       japanese: 'font-serifjp',
     },
-    image: 'gamegroupproject',
+    image: gamegroupproject,
     title: {
       english: 'Game Group Project',
       japanese: 'ゲーム・グループ・プロジェクト'
     },
+    tags: [
+      {
+      name: 'JavaScript',
+      color: "orange-text-gradient",
+      },
+      {
+      name: 'React',
+      color: "blue-text-gradient",
+      },
+    ],
+    source_code_link: "https://github.com/j-rob16/CodeClan_Dungeon_Game"
   },
   {
     description: {
@@ -23,11 +37,22 @@ const projects = [
       english: 'font-playfair',
       japanese: 'font-serifjp',
     },
-    image: 'nasagroupproject',
+    image: nasagroupproject,
     title: {
       english: 'NASA Group Project',
       japanese: 'NASA・グループ・プロジェクト'
-    }
+    },
+    tags: [
+      {
+        name: 'JavaScript',
+        color: "orange-text-gradient",
+      },
+      {
+      name: 'React',
+      color: "blue-text-gradient",
+      }
+    ],
+    source_code_link: "https://github.com/j-rob16/Group-JavaScript-React-Project"
   }
 ];
 

@@ -45,8 +45,8 @@ const Contact = ({ language, darkMode }) => {
       </motion.div>
 
       {/* FORM */}
-      <div className='md:flex md:justify-center gap-16 p-5 bg-slate-400 rounded-xl'>
-        <motion.div
+      <div className='gap-16 p-5 dark:bg-slate-600 bg-gray-800 rounded-xl'>
+        {/* <motion.div
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true, amount: 0.5 }}
@@ -56,7 +56,7 @@ const Contact = ({ language, darkMode }) => {
             visible: { opacity: 1, y: 0 }
           }}     
           className='md:mt-0'   
-        >
+        > */}
           <form
             target='_blank'
             onSubmit={onSubmit}
@@ -64,57 +64,66 @@ const Contact = ({ language, darkMode }) => {
             method='POST'
           >
           {/* NAME */}
-            <input 
-              className='w-full bg-blue font-semibold text-gray-200 placeholder-gray-300 p-3'
-              type='text'
-              placeholder={`${languageSet[language].formName}`}
-              {...register('name', {
-                required: true,
-                maxLength: 100
-              })}
-            />
-            {errors.name && (
-              <p className='text-red mt-1'>
-                {errors.name.type === 'required' && 'This field is required'}
-                {errors.name.type === 'maxLength' && 'Max Length is 100 char.'}
-              </p>
-            )}
+            <label className='flex flex-col'>
+              <span className='text-white font-medium mb-4'>{languageSet[language].formNameTitle}</span>
+              <input 
+                className='w-full bg-blue font-semibold text-gray-200 placeholder-gray-300 p-3'
+                type='text'
+                placeholder={`${languageSet[language].formName}`}
+                {...register('name', {
+                  required: true,
+                  maxLength: 100
+                })}
+              />
+              {errors.name && (
+                <p className='text-red mt-1'>
+                  {errors.name.type === 'required' && 'This field is required'}
+                  {errors.name.type === 'maxLength' && 'Max Length is 100 char.'}
+                </p>
+              )}
+            </label>
 
             {/* EMAIL */}
-            <input 
-              className='w-full bg-blue font-semibold text-gray-200 placeholder-gray-300 p-3 mt-5'
-              type='text'
-              placeholder={`${languageSet[language].formEmail}`}
-              {...register('email', {
-                required: true,
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              })}
-            />
-            {errors.email && (
-              <p className='text-red mt-1'>
-                {errors.email.type === 'required' && 'This field is required'}
-                {errors.email.type === 'pattern' && 'Not a valid email address'}
-              </p>
-            )}
+            <label className='flex flex-col mt-4'>
+              <span className='text-white font-medium'>{languageSet[language].formEmailTitle}</span>
+              <input 
+                className='w-full bg-blue font-semibold text-gray-200 placeholder-gray-300 p-3 mt-5'
+                type='text'
+                placeholder={`${languageSet[language].formEmail}`}
+                {...register('email', {
+                  required: true,
+                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                })}
+              />
+              {errors.email && (
+                <p className='text-red mt-1'>
+                  {errors.email.type === 'required' && 'This field is required'}
+                  {errors.email.type === 'pattern' && 'Not a valid email address'}
+                </p>
+              )}
+            </label>
 
             {/* MESSAGE */}
-            <textarea
-              className='w-full bg-blue font-semibold text-gray-200 placeholder-gray-300 p-3 mt-5'
-              type='text'
-              placeholder={`${languageSet[language].formMessage}`}
-              rows='4'
-              columns='50'
-              {...register('message', {
-                required: true,
-                maxLength: 2000
-              })}
-            />
-            {errors.message && (
-              <p className='text-red mt-1'>
-                {errors.message.type === 'required' && 'This field is required'}
-                {errors.message.type === 'maxLength' && 'Max Length is 2000 char.'}
-              </p>
-            )}
+            <label className='flex flex-col mt-4'>
+              <span className='text-white font-medium'>{languageSet[language].formMessageTitle}</span>
+              <textarea
+                className='w-full bg-blue font-semibold text-gray-200 placeholder-gray-300 p-3 mt-5'
+                type='text'
+                placeholder={`${languageSet[language].formMessage}`}
+                rows='4'
+                columns='50'
+                {...register('message', {
+                  required: true,
+                  maxLength: 2000
+                })}
+              />
+              {errors.message && (
+                <p className='text-red mt-1'>
+                  {errors.message.type === 'required' && 'This field is required'}
+                  {errors.message.type === 'maxLength' && 'Max Length is 2000 char.'}
+                </p>
+              )}
+            </label>
 
             {/* SUBMIT BUTTON */}
             <button
@@ -125,7 +134,7 @@ const Contact = ({ language, darkMode }) => {
               {languageSet[language].formSubmit}
             </button>
           </form>
-        </motion.div>
+        {/* </motion.div> */}
       </div>
     </section>
   )
