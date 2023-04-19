@@ -70,7 +70,7 @@ function App() {
       </motion.div>
 
       <motion.div 
-        className='w-full mx-auto'
+        className='w-5/6 mx-auto'
         onViewportEnter={() => setSelectedPage('projects')}
       >
         <Projects

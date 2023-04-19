@@ -87,7 +87,7 @@ const AboutMe = ({ language, darkMode }) => {
             className='w-full mx-auto text-left'
         >
           <div>
-            <p className={`${languageSet[language].font} font-semibold text-4xl text-redHighlight`}>
+            <p className={`${languageSet[language].font} font-semibold tracking-wide text-4xl text-redHighlight`}>
               {languageSet[language].aboutMe}
             </p>
             <div className='flex justify-start mt-5'>
@@ -95,7 +95,7 @@ const AboutMe = ({ language, darkMode }) => {
             </div>
           </div>
         </motion.div>
-          <p className={`${languageSet[language].font} text-left`}>{languageSet[language].aboutMeBlurb}</p>
+          <p className={`${languageSet[language].font} tracking-wider space-y-4 text-left`}>{languageSet[language].aboutMeBlurb}</p>
         </motion.div>
 
         <motion.div
@@ -148,7 +148,7 @@ const AboutMe = ({ language, darkMode }) => {
           }}
           className='mt-20 p-6'
         >
-          <p className={`${languageSet[language].font} text-center`}>{languageSet[language].aboutMeBlurb}</p>
+          <p className={`${languageSet[language].font} tracking-wider space-y-8 text-center`}>{languageSet[language].aboutMeBlurb}</p>
         </motion.div>
 
         <motion.div

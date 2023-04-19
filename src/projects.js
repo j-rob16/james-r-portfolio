@@ -16,11 +16,17 @@ const projects = [
       english: 'Game Group Project',
       japanese: 'ゲーム・グループ・プロジェクト'
     },
-    tags: [{
+    tags: [
+      {
+      name: 'JavaScript',
+      color: "orange-text-gradient",
+      },
+      {
       name: 'react',
       color: "blue-text-gradient",
-    }],
-    source_code_link: "https://github.com/"
+      },
+    ],
+    source_code_link: "https://github.com/j-rob16/CodeClan_Dungeon_Game"
   },
   {
     description: {
@@ -36,11 +42,17 @@ const projects = [
       english: 'NASA Group Project',
       japanese: 'NASA・グループ・プロジェクト'
     },
-    tags: [{
+    tags: [
+      {
+        name: 'JavaScript',
+        color: "orange-text-gradient",
+      },
+      {
       name: 'react',
       color: "blue-text-gradient",
-    }],
-    source_code_link: "https://github.com/"
+      }
+    ],
+    source_code_link: "https://github.com/j-rob16/Group-JavaScript-React-Project"
   }
 ];
 
