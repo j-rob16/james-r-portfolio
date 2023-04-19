@@ -1,16 +1,10 @@
-import useMediaQuery from '../hooks/useMediaQuery';
 import { motion } from 'framer-motion';
 import Tilt from "react-parallax-tilt";
-import { github } from '../assets';
+import github from '../assets/github.png'; 
 import { fadeIn } from '../utils/motion';
 
 
 const ProjectCard = ({ description, image, index, font, tags, title, source_code_link, language }) => {
-  const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
-  const projectBackground = title['english'].split(" ").join("-").toLowerCase();
-  const overlayStyles = `absolute h-full w-full opacity-100 overflow-none
-                         sm:bg-gradient-to-r from-transparent to-black z-[30] flex flex-col justify-center items-end p-16 overflow-none`
-
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -25,7 +19,7 @@ const ProjectCard = ({ description, image, index, font, tags, title, source_code
         <div className='relative w-full h-[230px]'>
           <img 
             src={image}
-            alt={title}
+            alt={title[language]}
             className='w-full h-full object-cover rounded-2xl'
           />
           {/* GITHUB LOGO */}
@@ -45,10 +39,10 @@ const ProjectCard = ({ description, image, index, font, tags, title, source_code
         {/* NAME & DESCRIPTION */}
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>
-            {title}
+            {title[language]}
           </h3>
           <p className='mt-2 text-secondary text-[14px]'>
-            {description}
+            {description[language]}
           </p>
         </div>
         <div className='mt-4 flex flex-wrap gap-2'>

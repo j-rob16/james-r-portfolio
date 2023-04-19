@@ -1,7 +1,5 @@
-import { 
-  gamegroupproject,
-  nasagroupproject
-} from '../src/assets';
+import gamegroupproject from './assets/gamegroupproject.png';
+import nasagroupproject from './assets/nasagroupproject.png';
 
 const projects = [
   {
