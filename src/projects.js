@@ -1,3 +1,8 @@
+import { 
+  gamegroupproject,
+  nasagroupproject
+} from '../src/assets';
+
 const projects = [
   {
     description: {
@@ -8,11 +13,16 @@ const projects = [
       english: 'font-playfair',
       japanese: 'font-serifjp',
     },
-    image: 'gamegroupproject',
+    image: gamegroupproject,
     title: {
       english: 'Game Group Project',
       japanese: 'ゲーム・グループ・プロジェクト'
     },
+    tags: [{
+      name: 'react',
+      color: "blue-text-gradient",
+    }],
+    source_code_link: "https://github.com/"
   },
   {
     description: {
@@ -23,11 +33,16 @@ const projects = [
       english: 'font-playfair',
       japanese: 'font-serifjp',
     },
-    image: 'nasagroupproject',
+    image: nasagroupproject,
     title: {
       english: 'NASA Group Project',
       japanese: 'NASA・グループ・プロジェクト'
-    }
+    },
+    tags: [{
+      name: 'react',
+      color: "blue-text-gradient",
+    }],
+    source_code_link: "https://github.com/"
   }
 ];
 
